@@ -6,9 +6,11 @@ This work provides a CircuitPython firmware for the BSidesCBR 2023 badge. The no
 Just copy the folder bsidescbr_2023 into the path circuitpython/ports/espressif/boards/ to define a new board.
 
 Then run make as follows to build the firmware
+
 make BOARD=bsidescbr_2023
 
 Then burn the firmware to the board as follows
+
 esptool.py --chip esp32s2  --port /dev/ttyACM0 --no-stub  --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0000 build-bsidescbr_2023/firmware.bin
 
 The badge shall have circuitpython ENABLED. However, the USB mode is not working yet. One needs to run python via REPL by connecting to the badge's COM port.
