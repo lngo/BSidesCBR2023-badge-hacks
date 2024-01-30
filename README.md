@@ -15,4 +15,8 @@ esptool.py --chip esp32s2  --port /dev/ttyACM0 --no-stub  --before=default_reset
 
 The badge shall have circuitpython ENABLED. However, the USB mode is not working yet. One needs to run python via REPL by connecting to the badge's COM port.
 
+Once the REPL is ready via the COM port terminal, the code of circuitpython_clock.py can be copied to the REPL and the clock will run on the screen.
+
+TODO: Get USB feature fully working on the board.
+
 A more story of this hack can be found here https://www.longngo.net/making/a-hack-of-the-bsidescbr-2023-conference-badge/
